@@ -6,9 +6,17 @@
     <title>User Profile</title>
 </head>
 <body>
-
     <h1>Your Upcoming Dog Walk</h1>
-    <p></p>
+ 
+    {% if profile %}
+        <p>{{profile}}</p>
+    {% else %}
+        <p>No user is found </p>
+    {% endif %}
 
+    {% for booking in bookings %}
+        <p>{{booking}}</p>
+    {% endfor %}
+        
 </body>
 </html>
